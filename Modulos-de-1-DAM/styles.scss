@@ -1,0 +1,61 @@
+$colores: red, magenta, cyan, yellow, grey, orange;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    table {
+        width: 45%;
+        border-collapse: collapse;
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: lime;
+        }
+    }
+
+    .izquierda{
+        text-align: left;
+    }
+    .derecha{
+        text-align: right;
+    }
+
+@for $i from 1 through length($colores){
+
+    .fila__#{$i}{
+        background-color: nth($list: $colores, $n: $i);
+    }
+
+}
+
+$px: 24;
+
+@for $j from 1 to 7{
+
+
+    h#{$j}{
+        font-size: #{$px}px;
+        margin-top: 35px;
+    }
+    $px : $px - 2;
+
+}
+}
+
+@function calcularAnchura($ancho,$multiplicador){
+    @return $ancho * $multiplicador
+}
+
+$anchoBase: 100%;
+
+@media (max-width: 500px){
+    body{
+        table{
+            width: calcularAnchura($anchoBase, .8);
+        }
+    }
+}
+
