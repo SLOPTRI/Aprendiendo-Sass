@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     align-items: center;
     table {
-        width: 45%;
+        width: 80%;
         border-collapse: collapse;
         th, td {
             border: 1px solid black;
@@ -51,10 +51,17 @@ $px: 24;
 
 $anchoBase: 100%;
 
-@media (max-width: 500px){
+@media (min-width: 501px) and (max-width: 1000px){
     body{
         table{
-            width: calcularAnchura($anchoBase, .8);
+            width: calcularAnchura($anchoBase, .5);
+        }
+    }
+}
+@media (min-width: 1001px){
+    body{
+        table{
+            width: calcularAnchura($anchoBase, .45);
         }
     }
 }
