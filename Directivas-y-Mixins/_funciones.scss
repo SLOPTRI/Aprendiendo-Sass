@@ -1,0 +1,3 @@
+@function calcularAnchura($ancho,$multiplicador){
+    @return $ancho * $multiplicador;
+}

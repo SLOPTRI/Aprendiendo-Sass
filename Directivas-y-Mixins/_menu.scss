@@ -1,0 +1,17 @@
+.menu {
+    position: sticky;
+    background-color: rgb(112, 112, 112);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    top: 2px;
+    @include centrar_linea;
+    a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        &:hover {
+            color: yellow;
+        }
+    }
+}

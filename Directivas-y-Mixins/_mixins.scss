@@ -1,0 +1,9 @@
+@mixin centrar_bloque {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centrar_linea {
+    text-align: center;
+}
