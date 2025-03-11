@@ -72,8 +72,9 @@ h6 {
 
 body {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
